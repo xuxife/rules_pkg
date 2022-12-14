@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Copyright 2022 The Bazel Authors. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -98,7 +99,7 @@ class TarFileWriter(object):
     self.name = name
 
     self.tar = tarfile.open(name=name, mode=mode, fileobj=self.fileobj,
-                            format=tarfile.GNU_FORMAT) 
+                            format=tarfile.GNU_FORMAT)
     self.members = set()
     self.directories = set()
     # Preseed the added directory list with things we should not add. If we

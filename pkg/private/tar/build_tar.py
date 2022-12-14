@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Copyright 2015 The Bazel Authors. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,7 +29,7 @@ from pkg.private.tar import tar_writer
 
 def normpath(path):
   """Normalize a path to the format we need it.
-  
+
   os.path.normpath changes / to \ on windows, but tarfile needs / style paths.
 
   Args:
@@ -408,7 +409,7 @@ def main():
 
   # Add objects to the tar file
   with TarFile(
-      options.output, 
+      options.output,
       directory = helpers.GetFlagValue(options.directory),
       compression = options.compression,
       compressor = options.compressor,
